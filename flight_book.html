@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flights</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  	<link href="https://fonts.googleapis.com/css?family=Pacifico|Paytone+One" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="main">
+		<div class="navbar">
+			<div class="icon">
+				<h2 class="logo"> Air Airline </h2>
+			</div>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="index.html">HOME</a>
+					</li>
+					<li>
+						<a href="flight_book.html">FLIGHTS</a>
+					</li>
+					<li>
+						<a href="ab_us.html">ABOUT-US</a>
+					</li>
+					<li>
+						<a href="contact_us.html">CONTACT-US</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container" id="second">
+			<ul class="nav nav-tabs">
+				<li class="active"><a class="tabshead" data-toggle="tab" href="#home"><i class="fas fa-plane"></i>Flights</a></li>
+				<li><a href="#menu1" class="tabshead" data-toggle="tab"><i class="far fa-address-book"></i> My Bookings</a></li>
+				<li><a class="tabshead" data-toggle="tab" href="#menu2"><i class="far fa-clock"></i>Flight Status</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
+					<br><br><br><br><br>
+					<form>
+						<select name="origin" class="drop" id="ori">
+							<option value="Origin">Origin</option>
+							<option value="Mumbai">MUMBAI</option>
+							<option value="Delhi">DELHI</option>
+							<option value="Banglore">BANGLORE</option>
+							<option value="Kolkata">KOLKATA</option>
+						</select>
+						<i class="fas fa-exchange-alt"></i>
+						<select name="destination" class="drop" id="dest">
+							<option value="Destination">Destination</option>
+							<option value="Mumbai">MUMBAI</option>
+							<option value="Delhi">DELHI</option>
+							<option value="Banglore">BANGLORE</option>
+							<option value="Kolkata">KOLKATA</option>
+						</select>
+						<input type="number" class="drop" name="passengers" step="1" min="1" max="10" placeholder="Number of passengers">
+						<span class="lab">Departure:</span>
+						<input type="date" name="depart" class="drop" id="depart">
+						<span class="lab">Return:</span>
+						<input type="date" name="return" class="drop" id="return">
+
+						<br><input type="submit" name="submit" id="flightsButton"onclick="func()">
+					</form>
+				</div>
+
+
+				<div id="menu1" class="tab-pane fade">
+					<br><br><br><br><br>
+					<form>
+						<input type="text" name="ticketno" id="id1" placeholder="Ticket Number" class="drop2">
+						<input type="text" name="lastname" id="id2" placeholder="passengers last name" class="drop2">
+						<input type="submit" name="submit" id="tickButton" onclick="func2()">
+					</form>
+				</div>
+
+
+				<div id="menu2" class="tab-pane fade">
+					<br><br><br><br><br>
+					<form>
+						<input type="text" name="flightid" placeholder="Flight Number" class="drop2">
+						<select name="origin" class="drop2">
+							<option value="org">Origin</option>
+							<option value="Mumbai">MUMBAI</option>
+							<option value="Delhi">DELHI</option>
+							<option value="Banglore">BANGLORE</option>
+							<option value="Kolkata">KOLKATA</option>
+						</select>
+						<span class="lab2">Date:</span>
+						<input type="date" name="depart" class="drop21">
+						<br><input type="submit" name="submit" id="fsButton" onclick="func3()">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function func(){
+			alert("Flight tickets are booked");
+		}
+		function func2(){
+			al1=document.getElementById("id1").value;
+			al2=document.getElementById("id2").value;
+			alert("Your flight details \n "+"Your Ticket Number is: "+al1+"\n Your last name is: "+al2+"\n Your flight Number is: SQ120");			
+		}
+		function func3(){
+			alert("Your flight is on time \n Please report before 2 hours");
+		}
+		
+	</script>
+</body>
+</html>
